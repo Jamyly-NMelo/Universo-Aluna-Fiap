@@ -1,0 +1,69 @@
+
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+
+                      - nome: Primeira interação
+  usa: ações/primeira interação@v1.3.0
+  com:
+    # Token para o repositório. Pode ser transmitido usando {{ secrets.GITHUB_TOKEN }}
+    token de repositório:
+    # Comente para postar sobre o primeiro problema de um indivíduo
+    mensagem de problema: # opcional
+    # Comente para postar na primeira solicitação pull de um indivíduo
+    pré-mensagem: # opcional
+
+                - nome: Cache
+  usa: ações/cache@v4.0.1
+  com:
+    # Uma lista de arquivos, diretórios e padrões curinga para armazenar em cache e restaurar
+    caminho:
+    # Uma chave explícita para restaurar e salvar o cache
+    chave:
+    # Uma lista ordenada de chaves a serem usadas para restaurar o cache obsoleto se nenhuma ocorrência de cache ocorreu para a chave. Observe que `cache-hit` retorna falso neste caso.
+    chaves de restauração: # opcional
+    # O tamanho do bloco usado para dividir arquivos grandes durante o upload, em bytes
+    upload-chunk-size: # opcional
+    # Um booleano opcional quando ativado, permite que os executores do Windows salvem ou restaurem caches que podem ser restaurados ou salvos respectivamente em outras plataformas
+    enableCrossOsArchive: # opcional, o padrão é falso
+    # Falha no fluxo de trabalho se a entrada do cache não for encontrada
+    fail-on-cache-miss: # opcional, o padrão é falso
+    # Verifica se existe uma entrada de cache para as entradas fornecidas (chave, chaves de restauração) sem baixar o cache
+    somente pesquisa: # opcional, o padrão é falso
+    # Execute a etapa posterior para salvar o cache mesmo se outra etapa anterior falhar
+    salvar sempre: # opcional, o padrão é falso
+          
+          
+          echo test, and deploy your project.
